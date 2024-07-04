@@ -1,10 +1,20 @@
-import { View, Text } from 'react-native'
 import React from 'react'
+import { Text, View } from 'react-native'
 
-export default function MovieDetail(): JSX.Element {
+const MovieDetail = ({ route }: any): JSX.Element => {
+  const { id } = route.params
+
   return (
-    <View>
-      <Text>MovieDetail</Text>
+    <View
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        marginTop: 32,
+      }}
+    >
+      <Text style={{ fontSize: 30 }}>Movie ID: {id}</Text>
     </View>
   )
 }
+
+export default MovieDetail
